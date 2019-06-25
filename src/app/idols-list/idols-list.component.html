@@ -1,6 +1,11 @@
 <p>idols-list works!</p>
 
 <div class="row">
-  <app-idol-card></app-idol-card>
-  <app-idol-card></app-idol-card>
+  <app-idol-card
+    *ngFor="let idol of idols"
+    [idol]="idol"
+    (click)="clicked(idol)"
+    [selected]="isSelected(idol)"
+  >
+  </app-idol-card>
 </div>

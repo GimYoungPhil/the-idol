@@ -14,4 +14,8 @@ export class AppComponent {
   constructor() {
     this.idols = data.map((i: Idol) => new Idol(i.name, i.group, i.company, i.birth, i.height, i.weight, i.imageUrl));
   }
+
+  idolWasSelected(idol: Idol): void {
+    console.log('Idol clicked: ', idol);
+  }
 }

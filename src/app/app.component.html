@@ -1,4 +1,4 @@
 <div class="the-idol-app container">
   <h5>App</h5>
-  <app-idols-list [idols]="idols"></app-idols-list>
+  <app-idols-list [idols]="idols" (onIdolSelected)="idolWasSelected($event)"></app-idols-list>
 </div>

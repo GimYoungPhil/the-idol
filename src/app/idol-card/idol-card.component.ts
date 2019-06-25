@@ -1,4 +1,6 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input } from '@angular/core';
+
+import { Idol } from '../idol.model';
 
 @Component({
   selector: 'app-idol-card',
@@ -7,6 +9,8 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class IdolCardComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'col-12 col-lg-6';
+  @Input() idol: Idol;
+  @Input() selected: boolean;
 
   constructor() { }
 
